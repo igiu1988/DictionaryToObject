@@ -14,6 +14,10 @@
 		D387632A1A0A08310076C8ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38763291A0A08310076C8ED /* Images.xcassets */; };
 		D387632D1A0A08310076C8ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D387632B1A0A08310076C8ED /* LaunchScreen.xib */; };
 		D38763391A0A08310076C8ED /* NSDictionToObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38763381A0A08310076C8ED /* NSDictionToObjectTests.m */; };
+		D38763441A0A08390076C8ED /* NSDictionary+ToManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D38763431A0A08390076C8ED /* NSDictionary+ToManagedObject.m */; };
+		D387634B1A0A08570076C8ED /* NSDictionary+Object.m in Sources */ = {isa = PBXBuildFile; fileRef = D38763461A0A08570076C8ED /* NSDictionary+Object.m */; };
+		D387634C1A0A08570076C8ED /* GMWikiItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D38763481A0A08570076C8ED /* GMWikiItemObject.m */; };
+		D387634D1A0A08570076C8ED /* GMWikiSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D387634A1A0A08570076C8ED /* GMWikiSectionObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,15 @@
 		D38763321A0A08310076C8ED /* NSDictionToObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSDictionToObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38763371A0A08310076C8ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38763381A0A08310076C8ED /* NSDictionToObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDictionToObjectTests.m; sourceTree = "<group>"; };
+		D38763421A0A08390076C8ED /* NSDictionary+ToManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ToManagedObject.h"; sourceTree = "<group>"; };
+		D38763431A0A08390076C8ED /* NSDictionary+ToManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ToManagedObject.m"; sourceTree = "<group>"; };
+		D38763451A0A08570076C8ED /* NSDictionary+Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Object.h"; sourceTree = "<group>"; };
+		D38763461A0A08570076C8ED /* NSDictionary+Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Object.m"; sourceTree = "<group>"; };
+		D38763471A0A08570076C8ED /* GMWikiItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMWikiItemObject.h; sourceTree = "<group>"; };
+		D38763481A0A08570076C8ED /* GMWikiItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMWikiItemObject.m; sourceTree = "<group>"; };
+		D38763491A0A08570076C8ED /* GMWikiSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMWikiSectionObject.h; sourceTree = "<group>"; };
+		D387634A1A0A08570076C8ED /* GMWikiSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMWikiSectionObject.m; sourceTree = "<group>"; };
+		D387634E1A0A098E0076C8ED /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 		D38763101A0A08310076C8ED = {
 			isa = PBXGroup;
 			children = (
+				D387634E1A0A098E0076C8ED /* CoreData.framework */,
 				D387631B1A0A08310076C8ED /* NSDictionToObject */,
 				D38763351A0A08310076C8ED /* NSDictionToObjectTests */,
 				D387631A1A0A08310076C8ED /* Products */,
@@ -81,6 +95,14 @@
 		D387631B1A0A08310076C8ED /* NSDictionToObject */ = {
 			isa = PBXGroup;
 			children = (
+				D38763421A0A08390076C8ED /* NSDictionary+ToManagedObject.h */,
+				D38763431A0A08390076C8ED /* NSDictionary+ToManagedObject.m */,
+				D38763451A0A08570076C8ED /* NSDictionary+Object.h */,
+				D38763461A0A08570076C8ED /* NSDictionary+Object.m */,
+				D38763471A0A08570076C8ED /* GMWikiItemObject.h */,
+				D38763481A0A08570076C8ED /* GMWikiItemObject.m */,
+				D38763491A0A08570076C8ED /* GMWikiSectionObject.h */,
+				D387634A1A0A08570076C8ED /* GMWikiSectionObject.m */,
 				D38763201A0A08310076C8ED /* AppDelegate.h */,
 				D38763211A0A08310076C8ED /* AppDelegate.m */,
 				D38763231A0A08310076C8ED /* ViewController.h */,
@@ -220,8 +242,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38763251A0A08310076C8ED /* ViewController.m in Sources */,
+				D387634B1A0A08570076C8ED /* NSDictionary+Object.m in Sources */,
 				D38763221A0A08310076C8ED /* AppDelegate.m in Sources */,
+				D38763441A0A08390076C8ED /* NSDictionary+ToManagedObject.m in Sources */,
+				D387634D1A0A08570076C8ED /* GMWikiSectionObject.m in Sources */,
 				D387631F1A0A08310076C8ED /* main.m in Sources */,
+				D387634C1A0A08570076C8ED /* GMWikiItemObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +438,7 @@
 				D387633E1A0A08310076C8ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D387633F1A0A08310076C8ED /* Build configuration list for PBXNativeTarget "NSDictionToObjectTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +447,7 @@
 				D38763411A0A08310076C8ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

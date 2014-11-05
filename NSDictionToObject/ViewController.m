@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "GMWikiSectionObject.h"
+#import "GMWikiItemObject.h"
+#import "NSDictionary+Object.h"
 
 @interface ViewController ()
 
@@ -16,7 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSDictionary *sectionInfo =
+    @{@"group_name": @"妙目含情",
+      @"icon": @"http://xxxxx.cccc/abc.jpg",
+      @"wiki": @[@{@"wiki_id": @3, @"wiki_name": @"abc"},
+                 @{@"wiki_id": @4, @"wiki_name": @"adsf"}]
+      };
+    GMWikiSectionObject *section = [sectionInfo convertToObject:[GMWikiSectionObject class]
+                                                     convertMap:@{@"wiki" : NSStringFromClass([GMWikiItemObject class])}];
+    
+    
+    GMWikiSectionObject *section1 = [sectionInfo convertToObject:[GMWikiSectionObject class]];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
