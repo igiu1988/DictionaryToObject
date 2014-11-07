@@ -8,9 +8,7 @@
 
 #import "NSDictionary+Object.h"
 #import <objc/runtime.h>
-@interface NSDictionary ()
-@property (nonatomic, strong) NSDictionary *map;
-@end
+
 @implementation NSDictionary (Object)
 - (id)convertToObject:(Class)someClass
 {
@@ -53,14 +51,9 @@
 
 - (void)setValue:(id)value forKey:(NSString *)key map:(NSDictionary *)map instance:(id)object
 {
-    if (!map || map.allKeys.count == 0) {
-        [object setValue:value forKey:key];
-        return;
-    }
-    
     id finalValue = value;
     
-    if ([value isKindOfClass:[NSArray class]]) {
+    if ([value isKindOfClass:[NSArray class]] && map && map.allKeys.count != 0) {
         
         // 可变数组用来存放将要生成的实体
         NSMutableArray *mutableArray = [NSMutableArray array];

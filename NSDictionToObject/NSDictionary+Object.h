@@ -24,13 +24,13 @@
  *  @code @{@"wiki" : @"GMWikiItemObject",
  @"wiki_section" : @"GMWikiSectionOjbect"}   @endcode
  *
- *  @param 
+ *  @param
  *      someClass   实例化类型
  *
- *  @param 
+ *  @param
  *      map         value 是字典时，相应 key 要变成的实体类型。
  *                  这个字典描述了 key 与对应类型的关系
-
+ 
  *  @return 转换好的数据
  */
 - (id)convertToObject:(Class)someClass convertMap:(NSDictionary *)map;
